@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.shape.Rectangle?>
+
+<AnchorPane prefHeight="500.0" prefWidth="700.0" 
+    xmlns:fx="http://javafx.com/fxml/1" 
+    xmlns="http://javafx.com/javafx/23.0.1" 
+    fx:controller="PetGame.Limitations">
+    
+    <children>
+        <ImageView fitHeight="500.0" fitWidth="700.0" opacity="1.0">
+            <image>
+                <Image url="@../../images/parentalcontrols.png" />
+            </image>
+        </ImageView>
+
+        <Label text="Playtime Restrictions"
+               layoutX="218" layoutY="80"
+               textFill="white">
+            <font>
+                <Font name="Berlin Sans FB" size="28"/>
+            </font>
+        </Label>
+
+        <CheckBox fx:id="playtimeCheckbox"
+                  text="Enable Restrictions"
+                  layoutX="218.0" layoutY="130.0"/>
+
+        <Label text="Blocked From:"
+               layoutX="218" layoutY="180"/>
+
+        <ComboBox fx:id="startHourCombo"
+                  layoutX="318" layoutY="175"
+                  prefWidth="90"/>
+
+        <Label text="To:"
+               layoutX="418" layoutY="180"/>
+
+        <ComboBox fx:id="endHourCombo"
+                  layoutX="448" layoutY="175"
+                  prefWidth="90"/>
+
+        <Button text="Save"
+                layoutX="250" layoutY="230"
+                onAction="#handleSaveLimitations"
+                prefWidth="80"/>
+
+        <Button text="Back"
+                layoutX="350" layoutY="230"
+                onAction="#handleCancel"
+                prefWidth="80"/>
+        
+    </children>
+</AnchorPane>
+

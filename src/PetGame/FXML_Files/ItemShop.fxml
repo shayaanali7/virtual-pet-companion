@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PetGame.ItemShopController">
+   <children>
+      <ImageView fx:id="backgroundImageView" fitWidth="700" fitHeight="500" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" />
+      <Label layoutX="50.0" layoutY="30.0" text="Welcome to the Item Shop">
+         <font>
+            <Font name="Berlin Sans FB" size="26.0" />
+         </font>
+      </Label>
+
+      <ImageView layoutX="50.0" layoutY="80.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/witch_hat.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="witchHatButton" layoutX="50.0" layoutY="170.0" text="Witch Hat" onAction="#handleItemPurchase"/>
+      <Label layoutX="50.0" layoutY="200.0" text="Price: 50 Coins"/>
+      <Label layoutX="50.0" layoutY="220.0" text="+15 Happiness"/>
+
+      <ImageView layoutX="180.0" layoutY="80.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/bow.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="bowButton" layoutX="180.0" layoutY="170.0" text="Bow" onAction="#handleItemPurchase"/>
+      <Label layoutX="180.0" layoutY="200.0" text="Price: 0 Coins"/>
+      <Label layoutX="180.0" layoutY="220.0" text="+8 Happiness"/>
+
+      <ImageView layoutX="310.0" layoutY="80.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/crown.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="crownButton" layoutX="310.0" layoutY="170.0" text="Crown" onAction="#handleItemPurchase"/>
+      <Label layoutX="310.0" layoutY="200.0" text="Price: 100 Coins"/>
+      <Label layoutX="310.0" layoutY="220.0" text="+15 Happiness"/>
+
+      <ImageView layoutX="440.0" layoutY="80.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/burger.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="burgerButton" layoutX="440.0" layoutY="170.0" text="Burger" onAction="#handleItemPurchase"/>
+      <Label layoutX="440.0" layoutY="200.0" text="Price: 25 Coins"/>
+      <Label layoutX="440.0" layoutY="220.0" text="+15 Energy"/>
+
+      <ImageView layoutX="570.0" layoutY="80.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/orange.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="orangeButton" layoutX="570.0" layoutY="170.0" text="Orange" onAction="#handleItemPurchase"/>
+      <Label layoutX="570.0" layoutY="200.0" text="Price: 0 Coins"/>
+      <Label layoutX="570.0" layoutY="220.0" text="+6 Energy"/>
+
+      <ImageView layoutX="50.0" layoutY="260.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/cake.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="cakeButton" layoutX="50.0" layoutY="350.0" text="Cake" onAction="#handleItemPurchase"/>
+      <Label layoutX="50.0" layoutY="380.0" text="Price: 15 Coins"/>
+      <Label layoutX="50.0" layoutY="400.0" text="+10 Energy"/>
+
+      <ImageView layoutX="180.0" layoutY="260.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/energy_drink.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="energyDrinkButton" layoutX="180.0" layoutY="350.0" text="Energy Drink" onAction="#handleItemPurchase"/>
+      <Label layoutX="180.0" layoutY="380.0" text="Price: 60 Coins"/>
+      <Label layoutX="180.0" layoutY="400.0" text="+45 Energy"/>
+
+      <ImageView layoutX="310.0" layoutY="260.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/ball.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="ballButton" layoutX="325.0" layoutY="350.0" text="Ball" onAction="#handleItemPurchase"/>
+      <Label layoutX="310.0" layoutY="380.0" text="Price: 20 Coins"/>
+      <Label layoutX="310.0" layoutY="400.0" text="+10 Happiness"/>
+
+      <ImageView layoutX="440.0" layoutY="260.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/trampoline.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="trampolineButton" layoutX="440.0" layoutY="350.0" text="Trampoline" onAction="#handleItemPurchase"/>
+      <Label layoutX="440.0" layoutY="380.0" text="Price: 150 Coins"/>
+      <Label layoutX="440.0" layoutY="400.0" text="+40 Happiness"/>
+
+      <ImageView layoutX="570.0" layoutY="260.0" fitHeight="80.0" fitWidth="80.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/healing_potion.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="healingPotionButton" layoutX="570.0" layoutY="350.0" text="Healing Potion" onAction="#handleItemPurchase"/>
+      <Label layoutX="570.0" layoutY="380.0" text="Price: 120 Coins"/>
+      <Label layoutX="570.0" layoutY="400.0" text="Restores Full Health"/>
+
+      <Label fx:id="coinBalanceLabel" layoutX="505.0" layoutY="30.0" text="Player Coins: 10">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+      </Label>
+
+      <Label fx:id="popupLabel" layoutX="192.0" layoutY="439.0" prefHeight="46.0" prefWidth="405.0">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font></Label>
+
+      <Button fx:id="backButton" layoutX="20.0" layoutY="455.0" prefHeight="25.0" prefWidth="120.0" text="Back To Game" onAction="#goBackToGame"/>
+
+   </children>
+</AnchorPane>

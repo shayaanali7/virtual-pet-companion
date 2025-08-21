@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PetGame.Tutorial">
+   <children>
+      <ImageView fitHeight="500.0" fitWidth="700.0" opacity="0.5" pickOnBounds="true" preserveRatio="false" layoutX="0.0" layoutY="0.0">
+         <image>
+            <Image url="@../../images/grass3.png" />
+         </image>
+      </ImageView>
+      <Button fx:id="tutorialButton" layoutX="110.0" layoutY="185.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="200.0" text="Tutorial" onAction="#goToTutorial">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font>
+      </Button>
+      <Button fx:id="helpButton" layoutX="380.0" layoutY="185.0" mnemonicParsing="false" prefHeight="70.0" prefWidth="200.0" text="Help" onAction="#goToHelp">
+         <font>
+            <Font name="Berlin Sans FB" size="30.0" />
+         </font>
+      </Button>
+      <Button layoutX="250.0" layoutY="380.0" mnemonicParsing="false" onAction="#switchToMainMenu" prefHeight="44.0" prefWidth="171.0" text=" Main Menu">
+         <font>
+            <Font name="Berlin Sans FB" size="20.0" />
+         </font>
+         <graphic>
+            <ImageView fitHeight="22.0" fitWidth="24.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../images/Home.png" />
+               </image>
+            </ImageView>
+         </graphic>
+      </Button>
+   </children>
+</AnchorPane>
+

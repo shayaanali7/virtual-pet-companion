@@ -1,0 +1,116 @@
+package PetGame;
+
+import java.io.IOException;
+import java.util.ArrayList;
+
+import javafx.application.Platform;
+import javafx.event.ActionEvent;
+import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
+import javafx.scene.control.Alert;
+import javafx.scene.control.Button;
+import javafx.scene.control.Label;
+import javafx.scene.control.TextArea;
+import javafx.scene.image.Image;
+import javafx.scene.image.ImageView;
+import javafx.stage.Stage;
+
+/**
+ * The HelpController class manages the help screen of the game.
+ * It provides information about the game mechanics and allows navigation back to the previous screen.
+ * 
+ * @author Ishaan Misra
+ */
+public class HelpController {
+
+    @FXML private Button goBack; // Button to navigate back to the previous screen
+    @FXML private TextArea textArea; // Text area to display help information
+
+    private Scene preScene; // Reference to the previous scene
+
+    /**
+     * Default constructor for the HelpController class.
+     */
+    public HelpController() {
+    }
+
+    /**
+     * Initializes the help screen by populating the text area with game instructions and tips.
+     */
+    public void initialize() {
+        textArea.setText(
+            "The pet needs sleep!!!\n" +
+            "- While sleeping, your pet cannot perform actions like eating, exercising, or playing.\n" +
+            "- If the sleep bar reaches zero, a health penalty is applied, and the pet will fall asleep and can no longer be interacted with. In the sleeping state the sleep value will slowly increase until it hits the maximum value. Once the max is reached, the pet wakes and returns to its normal state. During the sleeping state, the other statistics still decline normally.\n\n" +
+    
+            "The pet has health, so be careful!!\n" +
+            "- Low health means your pet may stop responding, so take your pet to the vet to restore its health.\n" +
+            "- If the health bar reaches zero, the pet dies and the game is over. You will then have the option to start a new game or load a game.\n\n" +
+    
+            "Feeding and Fullness:\n" +
+            "- When the fullness bar reaches zero, the pet enters a hungry state and the rate that happiness declines increases. Health points start decreasing until the pet exits the hungry state.\n" +
+            "- Use the Feed button to increase fullness. Be careful though because all this food is coming from your inventory!\n\n" +
+    
+            "Happy Pet, Happy Life:\n" +
+            "- Play, give gifts, or interact with your pet.\n" +
+            "- When happiness reaches zero, the pet will enter the angry state. In the angry state, the pet will refuse all commands of the player except ones that increase happiness!\n\n" +
+    
+            "Parental Controls:\n" +
+            "- If the playtime has a set limit selected by a parent, the game ends when that time is reached.\n\n" +
+    
+            "Tips for the game:\n" +
+            "- Green bars --> Healthy, \tOrange --> Moderate, \tRed --> LOW!!!\n" +
+            "- Make sure to check the stats and bars often and take care of your pet accordingly!\n\n" + 
+            "- Based on the pet’s current state, the following commands are available to the player:\n" + 
+            "\t1. Dead State: No commands.\n" + 
+            "\t2. Sleeping State: No commands.\n" + 
+            "\t3. Angry State: Give Gift and Play\n" + 
+            "\t4. Hungry State: All commands.\n" + 
+            "\t5. Normal State: All commands.\n\n" +
+    
+            "Keyboard Controls:\n" + 
+            "- **U** → Go to bed (sleep)\n" + 
+            "- **I** → Feed\n" + 
+            "- **O** → Give gift\n" + 
+            "- **J** → Take to vet\n" + 
+            "- **K** → Play\n" + 
+            "- **L** → Exercise\n"
+        );
+    }    
+
+    /**
+     * Sets the previous scene reference.
+     * 
+     * @param preScene The previous scene before entering the help screen.
+     */
+    @FXML
+    public void setPreScene(Scene preScene) {
+        this.preScene = preScene;
+    }
+
+    /**
+     * Gets the previous scene reference.
+     * 
+     * @param preScene The previous scene before entering the help screen.
+     */
+    public void getPreScene(Scene preScene) {
+        this.preScene = preScene;
+    }
+
+    /**
+     * Navigates back to the previous scene.
+     * 
+     * @param event The ActionEvent triggered by clicking the "Go Back" button.
+     */
+    @FXML
+    private void goBack(ActionEvent event) {
+        Stage stage = (Stage) ((Node) event.getSource()).getScene().getWindow();
+        stage.setScene(preScene);
+        stage.show();
+        System.out.println("Done");
+        System.out.println(preScene);
+    }
+}

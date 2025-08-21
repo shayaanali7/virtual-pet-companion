@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="700.0" style="-fx-background-color:#d9efff;" xmlns="http://javafx.com/javafx/23.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="PetGame.InventoryController">
+   <children>
+         <ImageView fx:id="backgroundImageView" fitHeight="600" fitWidth="800" AnchorPane.leftAnchor="0" AnchorPane.topAnchor="0" />
+        <Label layoutX="275.0" layoutY="20.0" text="Inventory">
+            <font>
+            <Font name="Berlin Sans FB" size="40.0" />
+         </font>
+        </Label>
+        <Label layoutX="245.0" layoutY="80.0" text="Items you have collected: ">
+            <font>
+                <Font name="Berlin Sans FB" size="20.0" />
+            </font>
+        </Label>
+        <Label layoutX="60.0" layoutY="120.0" text="Food Items: ">
+            <font>
+                <Font name="Berlin Sans FB" size="15.0" />
+            </font>
+        </Label>
+
+        <ImageView fitHeight="55.0" fitWidth="55.0" layoutX="85.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/burger.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="burgerLabel" layoutX="80.0" layoutY="212.0" text="Burger: 0" />
+        <Button fx:id="useBurgerButton" layoutX="90.0" layoutY="240.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="195.0" layoutY="160.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/cake.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="cakeLabel" layoutX="200.0" layoutY="212.0" text="Cake: 0" />
+        <Button fx:id="useCakeButton" layoutX="210.0" layoutY="240.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="320.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/energy_drink.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="drinkLabel" layoutX="290.0" layoutY="212.0" text="Energy Drink: 0" />
+        <Button fx:id="useEnergyDrinkButton" layoutX="330.0" layoutY="240.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="435.0" layoutY="145.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/healing_potion.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="potionLabel" layoutX="410.0" layoutY="212.0" text="Healing Potion: 0" />
+        <Button fx:id="useHealingPotionButton" layoutX="450.0" layoutY="240.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+
+        <ImageView fitHeight="60.0" fitWidth="60.0" layoutX="560.0" layoutY="150.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/orange.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="orangeLabel" layoutX="550.0" layoutY="212.0" text="Orange: 0" />
+        <Button fx:id="useOrangeButton" layoutX="570.0" layoutY="240.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+
+        <Label layoutX="60.0" layoutY="285.0" text="Gift Items:">
+            <font>
+                <Font name="Berlin Sans FB" size="15.0" />
+            </font>
+        </Label>
+        
+        <ImageView fitHeight="45.0" fitWidth="45.0" layoutX="85.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/ball.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="ballLabel" layoutX="80.0" layoutY="370.0" text="Ball: 0" />
+        <Button fx:id="useBallButton" layoutX="90.0" layoutY="398.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="195.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/bow.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="bowLabel" layoutX="200.0" layoutY="370.0" text="Bow: 0" />
+        <Button fx:id="useBowButton" layoutX="210.0" layoutY="398.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+        <ImageView fitHeight="100.0" fitWidth="100.0" layoutX="300.0" layoutY="295.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/crown.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="crownLabel" layoutX="320.0" layoutY="370.0" text="Crown: 0" />
+        <Button fx:id="useCrownButton" layoutX="330.0" layoutY="398.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+
+        <ImageView fitHeight="65.0" fitWidth="65.0" layoutX="435.0" layoutY="310.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/witch_hat.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="hatLabel" layoutX="440.0" layoutY="370.0" text="Witch Hat: 0" />
+        <Button fx:id="useHatButton" layoutX="450.0" layoutY="398.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+
+        <ImageView fitHeight="70.0" fitWidth="70.0" layoutX="550.0" layoutY="320.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../images/items/trampoline.png" />
+         </image>
+        </ImageView>
+        <Label fx:id="trampolineLabel" layoutX="540.0" layoutY="370.0" text="Trampoline: 0" />
+        <Button fx:id="useTrampolineButton" layoutX="570.0" layoutY="398.0" mnemonicParsing="false" onAction="#useItem" prefHeight="10.0" prefWidth="42.0" text="Use" />
+        
+        <Button fx:id="gameButton" layoutX="430.0" layoutY="450.0" mnemonicParsing="false" onAction="#goBackToGame" prefHeight="25.0" prefWidth="120.0" text="Back To Game" AnchorPane.leftAnchor="24.0" />
+      <Label fx:id="popupLabel" layoutX="192.0" layoutY="439.0" prefHeight="46.0" prefWidth="405.0">
+         <font>
+            <Font name="Berlin Sans FB" size="22.0" />
+         </font></Label>
+   </children>
+</AnchorPane>

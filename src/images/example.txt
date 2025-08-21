@@ -1,0 +1,7 @@
+Added a sentence to this to show the progression.
+
+After completely integrating and testing that a feature works, im going to add and commit the necessary files, then instead of pushing that branch, im going to merge it with main and git push origin main
+
+something
+
+something else
